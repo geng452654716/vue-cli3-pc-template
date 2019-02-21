@@ -25,6 +25,11 @@ module.exports = {
       message: '项目描述',
       default: 'vue cli3 template',
     },
+    author: {
+      message: '项目归属',
+      required: false,
+      default: 'softlink',
+    },
     router: {
       type: 'confirm',
       message: '是否初始化router',
