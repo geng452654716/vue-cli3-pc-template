@@ -25,10 +25,6 @@ module.exports = {
       message: '项目描述',
       default: 'vue cli3 template',
     },
-    author: {
-      type: 'string',
-      message: '项目归属',
-    },
     router: {
       type: 'confirm',
       message: '是否初始化router',

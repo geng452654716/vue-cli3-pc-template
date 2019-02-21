@@ -1,7 +1,6 @@
 module.exports = {
   plugins: {
-    autoprefixer: {},
-    {{#isMobile}}
+    autoprefixer: {}{{#isMobile}},
     "postcss-import": {},
     "postcss-url": {},
     "postcss-aspect-ratio-mini": {},
