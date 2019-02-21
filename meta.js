@@ -15,25 +15,21 @@ module.exports = {
 
   prompts: {
     name: {
-      when: 'isNotTest',
       type: 'string',
       required: true,
       message: '项目名称',
     },
     description: {
-      when: 'isNotTest',
       type: 'string',
       required: false,
       message: '项目描述',
       default: 'vue cli3 template',
     },
     author: {
-      when: 'isNotTest',
       type: 'string',
       message: '项目归属',
     },
     router: {
-      when: 'isNotTest',
       type: 'confirm',
       message: '是否初始化router',
     },
