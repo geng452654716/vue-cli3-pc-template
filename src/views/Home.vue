@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <p>welcome to vue-cli3-template</p>
+    <p>详细说明请查看README</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import { mapState,mapGetters } from 'vuex';
 export default {
-  name: "home",
-  components: {
-    HelloWorld
+  created() {
+    console.log(this.c);
+  },
+  computed: {
+    ...mapState('demo',{
+      a: "defaultField"
+    }),
+    ...mapGetters('demo', {
+      c: "defaultField"
+    })
   }
 };
 </script>
+
+<style lang="less">
+div {
+  margin-top: 200px;
+}
+p {
+  text-align: center;
+  font-size: 30px;
+}
+</style>

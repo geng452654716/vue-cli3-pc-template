@@ -1,13 +1,19 @@
 {
-  "name": "vue-cli3-template",
+  "name": "vue-cli3-pc-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve-ceshi": "vue-cli-service serve --mode ceshi",
+    "serve-zhen": "vue-cli-service serve --mode zhen",
+    "analyz": "NODE_ENV=production  npm_config_report=true npm run build"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "iview": "^3.0.1",
+    "js-cookie": "^2.2.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -18,8 +24,15 @@
     "@vue/cli-service": "^3.0.3",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.8.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "size-plugin": "^1.1.2",
+    "style-resources-loader": "^1.2.1",
+    "vue-cli-plugin-iview": "^1.0.6",
     "vue-template-compiler": "^2.5.21"
   }
 }
