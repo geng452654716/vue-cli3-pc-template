@@ -44,27 +44,7 @@ module.exports = {
     "iview": {
       type: "confirm",
       message: "是否需要安装iview"
-    },
-    autoInstall: {
-      type: 'list',
-      message: '是否需要初始化加载依赖',
-      choices: [{
-          name: '是的，使用 npm',
-          value: 'npm',
-          short: 'npm',
-        },
-        {
-          name: '是的, 使用 Yarn',
-          value: 'yarn',
-          short: 'yarn',
-        },
-        {
-          name: '不，我自己初始化',
-          value: false,
-          short: 'no',
-        },
-      ],
-    },
+    }
   },
   filters: {
     'src/router/**/*': 'router',
