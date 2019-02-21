@@ -23,6 +23,6 @@ module.exports = {
       autoprefixer: false,
       "postcss-zindex": false
     }
+    {{/isMobile}}
   }
-  {{/isMobile}}
 };
