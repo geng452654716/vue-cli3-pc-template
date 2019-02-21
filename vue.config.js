@@ -1,6 +1,7 @@
 const path = require('path')
 const SizePlugin = require('size-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+const CompressionWebpackPlugin = require("compression-webpack-plugin");
 
 const isProductionEnvFlag = process.env.NODE_ENV === 'production'
 
@@ -55,10 +56,15 @@ module.exports = {
 
   configureWebpack: {
     plugins: [
+      // 使用 webpack 缓存，提高构建速度
+      new HardSourceWebpackPlugin(),
       // 打包时显示包大小
       isProductionEnvFlag ? new SizePlugin() : () => {},
-      // 使用 webpack 缓存，提高构建速度
-      new HardSourceWebpackPlugin()
+      // 开启 gzip
+      isProductionEnvFlag ? new CompressionWebpackPlugin({
+        test: /\.(js|css|woff|ttf|png|jpg)$/,
+        threshold: 10240
+      }) : () => {}
     ]
   },
 
