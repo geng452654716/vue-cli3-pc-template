@@ -46,7 +46,6 @@ module.exports = {
       message: "是否需要安装iview"
     },
     autoInstall: {
-      when: 'isNotTest',
       type: 'list',
       message: '是否需要初始化加载依赖',
       choices: [{
