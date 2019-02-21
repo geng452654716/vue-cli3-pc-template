@@ -6,6 +6,7 @@
 </template>
 
 <script>
+{{#vuex}}
 import { mapState,mapGetters } from 'vuex';
 export default {
   created() {
@@ -20,6 +21,7 @@ export default {
     })
   }
 };
+{{/vuex}}
 </script>
 
 <style lang="less">

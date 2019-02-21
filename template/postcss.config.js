@@ -1,12 +1,7 @@
-{{#if isMobile}}
 module.exports = {
   plugins: {
-    autoprefixer: {}
-  }
-};
-{{else}}
-module.exports = {
-  plugins: {
+    autoprefixer: {},
+    {{#isMobile}}
     "postcss-import": {},
     "postcss-url": {},
     "postcss-aspect-ratio-mini": {},
@@ -29,5 +24,5 @@ module.exports = {
       "postcss-zindex": false
     }
   }
-}
-{{/if}}
+  {{/isMobile}}
+};
